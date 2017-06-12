@@ -5,6 +5,7 @@ using System.Text;
 
 using Xamarin.Forms;
 
+// Initial Hello World
 namespace HelloWorld
 {
 	public partial class App : Application
