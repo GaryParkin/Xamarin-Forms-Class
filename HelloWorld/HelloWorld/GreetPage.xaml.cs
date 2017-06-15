@@ -18,6 +18,23 @@ namespace HelloWorld
 
          slider.Value = 0.5;
 
+         // Check for different devices
+         switch (Device.RuntimePlatform)
+         {
+            case Device.iOS:
+               Padding = new Thickness(0, 20, 0, 0);
+               break;
+            case Device.Android:
+               Padding = new Thickness(0, 20, 0, 0);
+               break;
+            case Device.WinPhone:
+               Padding = new Thickness(0, 20, 0, 0);
+               break;
+            default:
+               break;
+         }
+
+
       }
    }
 }
