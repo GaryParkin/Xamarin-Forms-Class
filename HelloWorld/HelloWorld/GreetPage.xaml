@@ -10,15 +10,26 @@
                   >
       </OnPlatform>
    </ContentPage.Padding>
-   <StackLayout BindingContext="{x:Reference slider}" HorizontalOptions="Center" VerticalOptions="Center">
-      <BoxView Color="Green" Opacity="{Binding Value}" />
+   <StackLayout BindingContext="{x:Reference slider}" HorizontalOptions="FillAndExpand">
+      <Button x:Name="btnNext" Clicked="btnNext_Clicked" HorizontalOptions="Center" Text="Next" />
       <Label 
             Text="{Binding Value, 
-                     StringFormat='Value is {0:F2}' }"
+                     StringFormat='Font Size: {0:F0}' }"
 
             Opacity="{Binding Value }"
+            HorizontalOptions="Center"
              />
 
-      <Slider x:Name="slider"></Slider>
+      <Slider x:Name="slider" Maximum="50" Minimum="16" ></Slider>
+
+      <Label
+            x:Name="txtQuote"
+            FontSize="{Binding Value}"
+
+            Text="This is a test"
+            HorizontalOptions="Center"
+             />
+
+
    </StackLayout>
 </ContentPage>
