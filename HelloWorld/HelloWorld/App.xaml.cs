@@ -14,7 +14,7 @@ namespace HelloWorld
 		{
 			InitializeComponent();
 
-         MainPage = new HelloWorld.RelativePage();
+         MainPage = new HelloWorld.ImagePage();
 		}
 
 		protected override void OnStart ()
