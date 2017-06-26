@@ -14,7 +14,7 @@ namespace HelloWorld
 		{
 			InitializeComponent();
 
-         MainPage = new HelloWorld.GridPage();
+         MainPage = new HelloWorld.RelativePage();
 		}
 
 		protected override void OnStart ()
