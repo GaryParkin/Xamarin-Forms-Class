@@ -15,6 +15,20 @@ namespace HelloWorld
 		public RelativePage ()
 		{
 			InitializeComponent ();
-		}
-	}
+
+         RelativeLayout layout = new RelativeLayout();
+         Content = layout;
+
+
+         BoxView aquaBox = new BoxView { Color = Color.Aqua };
+         layout.Children.Add(aquaBox,
+            widthConstraint: Constraint.RelativeToParent(parent => parent.Width),
+            heightConstraint: Constraint.RelativeToParent(Parent => Parent.Height * 0.3));
+
+         BoxView silverBox = new BoxView { Color = Color.Silver };
+         layout.Children.Add(silverBox,
+            yConstraint: Constraint.RelativeToView(aquaBox, (RelativeLayout, element) => element.Height + 20));
+
+      }
+   }
 }
