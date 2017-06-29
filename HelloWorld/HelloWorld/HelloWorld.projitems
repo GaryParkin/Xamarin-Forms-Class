@@ -29,6 +29,10 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)EmbeddedImageExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlatformImagePage.xaml.cs">
+      <DependentUpon>PlatformImagePage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)RelativePage.xaml.cs">
       <DependentUpon>RelativePage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -83,5 +87,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)smallbk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)PlatformImagePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
