@@ -5,7 +5,7 @@
    <ContentPage.Content>
       <StackLayout>
          <Label Text="Welcome to Xamarin Forms!" />
-         <Button Image="clock.png" />
+         <Button x:Name="btn" />
       </StackLayout>
    </ContentPage.Content>
 </ContentPage>

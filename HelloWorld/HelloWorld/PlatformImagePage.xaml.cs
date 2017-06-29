@@ -15,6 +15,9 @@ namespace HelloWorld
 		public PlatformImagePage ()
 		{
 			InitializeComponent ();
+
+         btn.Image = (FileImageSource) ImageSource.FromFile("clock.png");
+
 		}
 	}
 }
