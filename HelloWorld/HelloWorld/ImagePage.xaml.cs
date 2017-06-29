@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using System.Reflection;
+
 namespace HelloWorld
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -16,11 +18,20 @@ namespace HelloWorld
 		{
 			InitializeComponent ();
 
-         // If you do this in xaml, the image will be cashed for 24 hours, so we do it here
-         UriImageSource imageSource = new UriImageSource { Uri = new Uri("http://lorempixel.com/1920/1080/sports/7/") };
-         // This removes casching
-         imageSource.CachingEnabled = false;
-         image.Source = imageSource;
-		}
+         //image.Source = ImageSource.FromResource("HelloWorld.background.jpg");
+
+         //var embeddedImage = new Image { Aspect = Aspect.AspectFit };
+         //image.Source = ImageSource.FromResource("HelloWorld.images.background.jpg");
+
+         //var assembly = typeof(EmbeddedImages).GetTypeInfo().Assembly;
+         //foreach (var res in assembly.GetManifestResourceNames())
+         //{
+         //   System.Diagnostics.Debug.WriteLine("found resource: " + res);
+         //}
+
+         //var embeddedImage = new Image { Aspect = Aspect.AspectFit };
+         //image.Source = ImageSource.FromResource("smallbk.jpg");
+
+      }
 	}
 }

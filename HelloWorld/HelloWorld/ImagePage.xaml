@@ -1,15 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HelloWorld.ImagePage"
-             BackgroundColor="Black">
-   <ContentPage.Content>
-      <AbsoluteLayout>
-         <ActivityIndicator 
-            IsRunning="{Binding Source={x:Reference image}, Path=IsLoading }" Color="White"
-            AbsoluteLayout.LayoutBounds="0.5, 0.5, 100, 100" AbsoluteLayout.LayoutFlags="PositionProportional" />
-         <Image x:Name="image" Aspect="AspectFill"
-            AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
-      </AbsoluteLayout>
-   </ContentPage.Content>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:HelloWorld"
+    x:Class="HelloWorld.ImagePage">
+   <ContentPage.Padding>
+      <OnPlatform x:TypeArguments="Thickness">
+         <OnPlatform.iOS>0, 20, 0, 0</OnPlatform.iOS>
+      </OnPlatform>
+   </ContentPage.Padding>
+   <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+      <Label Text="Image Resource Xaml" />
+      <!-- uses a custom Extension defined in this project for now -->
+      <Image Source="{local:ImageResource HelloWorld.background.jpg}" />
+
+      <Label Text="HelloWorld.beach.jpg embedded resource" />
+   </StackLayout>
 </ContentPage>
