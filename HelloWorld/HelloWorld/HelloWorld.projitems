@@ -12,7 +12,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Contact.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)EmbeddedImageResourceExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GreetPage.xaml.cs">
       <DependentUpon>GreetPage.xaml</DependentUpon>
@@ -34,6 +33,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)EmbeddedImageExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Contact.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PlatformImagePage.xaml.cs">
       <DependentUpon>PlatformImagePage.xaml</DependentUpon>
       <SubType>Code</SubType>
