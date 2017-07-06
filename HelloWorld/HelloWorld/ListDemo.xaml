@@ -4,13 +4,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HelloWorld.ListDemo">
 
-   <ListView x:Name="listView" 
-             IsGroupingEnabled="True"
-             GroupDisplayBinding="{Binding Title}"
-             GroupShortNameBinding="{Binding ShortTitle}">
+   <ListView x:Name="listView" >
       <ListView.ItemTemplate>
          <DataTemplate>
-            <TextCell Text="{Binding Name}" Detail="{Binding Status}" />
+            <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageUrl}" TextColor="Black" DetailColor="Gray" />
          </DataTemplate>
       </ListView.ItemTemplate>
    </ListView>

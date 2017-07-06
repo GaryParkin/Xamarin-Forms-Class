@@ -34,7 +34,6 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)EmbeddedImageExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Contact.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ContactGroup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PlatformImagePage.xaml.cs">
       <DependentUpon>PlatformImagePage.xaml</DependentUpon>
       <SubType>Code</SubType>
