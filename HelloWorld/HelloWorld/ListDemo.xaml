@@ -4,7 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HelloWorld.ListDemo">
 
-   <ListView x:Name="listView" ItemSelected="listView_ItemSelected" >
+   <ListView x:Name="listView" >
       <ListView.ItemTemplate>
          <DataTemplate>
             <ImageCell Text="{Binding Name}" Detail="{Binding Status}" ImageSource="{Binding ImageUrl}" TextColor="Black" DetailColor="Gray" />
