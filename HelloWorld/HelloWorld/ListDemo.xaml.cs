@@ -24,20 +24,20 @@ namespace HelloWorld
             "Bob"
          };
 
-         listView.ItemsSource = new List<Contact>
+         listView.ItemsSource = new List<ContactGroup>
          {
-            new Contact {Name = "Mosh", ImageUrl="http://lorempixel.com/100/100/people/1"},
-            new Contact {Name = "John", ImageUrl="http://lorempixel.com/100/100/people/2", Status="hey, let's talk"}
+            new ContactGroup("M", "M")
+            {
+               new Contact {Name = "Mosh", ImageUrl="http://lorempixel.com/100/100/people/1"}
+            },
+            new ContactGroup("J", "J")
+            {
+               new Contact {Name = "John", ImageUrl="http://lorempixel.com/100/100/people/2", Status="hey, let's talk"}
+            }
          };
 
 
-
-
       }
 
-      private void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-      {
-
-      }
    }
 }
