@@ -31,13 +31,7 @@ namespace HelloWorld
          };
 
 
-
-
       }
 
-      private void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-      {
-
-      }
    }
 }
