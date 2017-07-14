@@ -7,7 +7,12 @@
    <ListView x:Name="listView" >
       <ListView.ItemTemplate>
          <DataTemplate>
-            <TextCell Text="{Binding Name}" Detail="{Binding Status}" TextColor="Black" DetailColor="Gray" />
+            <TextCell Text="{Binding Name}" Detail="{Binding Status}" >
+               <TextCell.ContextActions>
+                  <MenuItem Text="Call" Clicked="Call_Clicked" CommandParameter="{Binding .}" />
+                  <MenuItem Text="Delete" Clicked="Delete_Clicked" IsDestructive="True" CommandParameter="{Binding .}" />
+               </TextCell.ContextActions>
+            </TextCell>
          </DataTemplate>
       </ListView.ItemTemplate>
    </ListView>
