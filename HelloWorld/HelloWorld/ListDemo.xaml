@@ -4,13 +4,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HelloWorld.ListDemo">
 
-   <ListView x:Name="listView" >
-      <ListView.ItemTemplate>
-         <DataTemplate>
-            <TextCell Text="{Binding Name}" Detail="{Binding Status}" TextColor="Black" DetailColor="Gray" />
-         </DataTemplate>
-      </ListView.ItemTemplate>
-   </ListView>
-
+   <StackLayout>
+      <!--There is also a SearchButtonPressed event-->
+      <SearchBar Placeholder="Search..." TextChanged="SearchBar_TextChanged" />
+      <ListView x:Name="listView" >
+         <ListView.ItemTemplate>
+            <DataTemplate>
+               <TextCell Text="{Binding Name}" Detail="{Binding Status}" TextColor="Black" DetailColor="Gray" />
+            </DataTemplate>
+         </ListView.ItemTemplate>
+      </ListView>
+   </StackLayout>
 
 </ContentPage>
