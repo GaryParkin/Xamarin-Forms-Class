@@ -17,12 +17,6 @@ namespace HelloWorld
       {
          InitializeComponent();
 
-         List<string> names = new List<string>
-         {
-            "Mosh",
-            "John",
-            "Bob"
-         };
 
          listView.ItemsSource = new List<Contact>
          {
