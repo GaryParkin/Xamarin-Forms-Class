@@ -14,7 +14,7 @@ namespace HelloWorld
 		{
 			InitializeComponent();
 
-         MainPage = new HelloWorld.ListDemo();
+         MainPage = new NavigationPage( new MainPage());
 		}
 
 		protected override void OnStart ()

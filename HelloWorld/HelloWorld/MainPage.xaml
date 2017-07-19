@@ -2,10 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:HelloWorld"
-             x:Class="HelloWorld.MainPage">
+             x:Class="HelloWorld.MainPage"
+             Title="Contacts">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
+   <ContentPage.ToolbarItems>
+      <ToolbarItem Icon="plus.png" Text="New" Activated="ToolbarItem1_Activated" Order="Primary" />
+      <ToolbarItem Icon="clock.png" Text="Another" Activated="ToolbarItem2_Activated" Order="Primary" />
+      <!--Secondary shows in the overflow (hotdog) menu. There is No way to change this to a hamberger menu-->
+      <!--The icons on the secondary menu do not show in Android by design-->
+      <ToolbarItem Icon="plus.png" Text="Menu Item 1" Activated="MenuItem1_Activated" Order="Secondary" />
+      <ToolbarItem Icon="plus.png" Text="Menu Item 2" Activated="MenuItem2_Activated" Order="Secondary" />
+      <ToolbarItem Icon="plus.png" Text="Menu Item 3" Activated="MenuItem3_Activated" Order="Secondary" />
+   </ContentPage.ToolbarItems>
 </ContentPage>
