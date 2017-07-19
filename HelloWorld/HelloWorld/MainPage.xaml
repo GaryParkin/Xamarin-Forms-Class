@@ -1,11 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:HelloWorld"
-             x:Class="HelloWorld.MainPage">
+             x:Class="HelloWorld.MainPage" >
 
-	<Label Text="Welcome to Xamarin Forms!" 
+   <local:ListDemo Title="Contacts" Icon="clock.png" />
+
+   <NavigationPage Title="page1" Icon="clock.png">
+      <!--Use the Arguments so the content page is passed-to the navagation page-->
+      <!--THIS MAKES NO SENSE ON ANDROID BECAUSE THE TABS ARE AT THE TOP-->
+      <x:Arguments>
+         <ContentPage>
+            <Label Text="Content of Page1" 
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
+         </ContentPage>
+      </x:Arguments>
+   </NavigationPage>
 
-</ContentPage>
+   <ContentPage Title="page2" Icon="clock.png">
+      <Label Text="Content of Page2" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+   </ContentPage>
+</TabbedPage>
