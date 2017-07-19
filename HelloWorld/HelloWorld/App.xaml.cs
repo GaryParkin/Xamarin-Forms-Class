@@ -14,7 +14,8 @@ namespace HelloWorld
 		{
 			InitializeComponent();
 
-         MainPage = new HelloWorld.ListDemo();
+         // IMPORTANT!  Don't just assign the page, use the NavigationPage
+         MainPage = new NavigationPage(new ContactsPage());
 		}
 
 		protected override void OnStart ()
