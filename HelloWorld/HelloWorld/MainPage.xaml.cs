@@ -7,11 +7,13 @@ using Xamarin.Forms;
 
 namespace HelloWorld
 {
-	public partial class MainPage : ContentPage
-	{
-		public MainPage()
-		{
-			InitializeComponent();
-		}
-	}
+   public partial class MainPage : CarouselPage
+   {
+      public MainPage()
+      {
+         InitializeComponent();
+
+      }
+
+   }
 }
