@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorld.MenuPage"
+                  Title="test">
+
+   <MasterDetailPage.Master>
+      <ContentPage Padding="0, 20, 0, 0" Title="Master" BackgroundColor="Beige" >
+         <StackLayout>
+            <Label Text="Menu Item 1" />
+            <Label Text="Menu Item 2" />
+            <Label Text="Menu Item 3" />
+            <Label Text="Menu Item 4" />
+            <Label Text="Menu Item 5" />
+            <Label Text="Menu Item 6" />
+         </StackLayout>         
+      </ContentPage>
+   </MasterDetailPage.Master>
+
+   <MasterDetailPage.Detail>
+      <!--Empty content page-->
+   </MasterDetailPage.Detail>
+
+</MasterDetailPage>
