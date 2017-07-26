@@ -13,6 +13,13 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)EmbeddedImageResourceExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extentions\DateCell.xaml.cs">
+      <DependentUpon>DateCell.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)FormsPage.xaml.cs">
+      <DependentUpon>FormsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)GreetPage.xaml.cs">
       <DependentUpon>GreetPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -103,6 +110,15 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ListDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Extentions\DateCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)FormsPage.xaml">
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
 </Project>
